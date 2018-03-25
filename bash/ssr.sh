@@ -7,22 +7,30 @@ if [ -z $EDITOR ];then
     EDITOR=vi
 fi
 
-help() {
-    echo -e "\033[1;32m"
-    echo ShadowSocksR python client tool
-    echo -e if you have not install ssr, please run \"ssr install\"
-    echo Usage:
-    echo -e "   " ssr help
-    echo -e "   " ssr config : edit config.json
-    echo -e "   " ssr install : install shadowsocksr client
-    echo -e "   " ssr uninstall : uninstall shadowsocksr client
-    echo -e "   " ssr start : start the shadowsocks service
-    echo -e "   " ssr stop : stop the shadowsocks service
-    echo -e "   " ssr restart : restart the shadowsocks service
-    echo -e "   " ssr log : cat the log of shadowsocks
-}
-
 install_path=/usr/local/share/shadowsocksr
+
+help() {
+    echo -e "\033[0;32m     _                 _
+ ___(_)_ __ ___  _ __ | | ___   ___ ___ _ __
+/ __| | '_ \` _ \| '_ \| |/ _ \ / __/ __| '__|
+\__ \ | | | | | | |_) | |  __/ \__ \__ \ |
+|___/_|_| |_| |_| .__/|_|\___| |___/___/_|
+                |_|
+"
+    echo ShadowSocksR python client tool
+    echo -e If you have not install ssr, please run \"ssr install\"
+    echo ""
+    echo -e "\033[0;33m"Default install path:" \033[0m"$install_path
+    echo -e "\033[0;33m"Usage:
+    echo -e "    \033[0;32m" ssr help"             \033[0m"Display this help message
+    echo -e "    \033[0;32m" ssr config"           \033[0m"Edit config.json and run "\033[1;32mssr restart"
+    echo -e "    \033[0;32m" ssr install"          \033[0m"Install shadowsocksr client
+    echo -e "    \033[0;32m" ssr uninstall"        \033[0m"Uninstall shadowsocksr client
+    echo -e "    \033[0;32m" ssr start"            \033[0m"Start the shadowsocksr local service
+    echo -e "    \033[0;32m" ssr stop"             \033[0m"Stop the shadowsocksr local service
+    echo -e "    \033[0;32m" ssr restart"          \033[0m"Restart the shadowsocksr local service
+    echo -e "    \033[0;32m" ssr log"              \033[0m"Cat the log of shadowsocksr
+}
 
 change_workbench() {
     cd $install_path/shadowsocks/
