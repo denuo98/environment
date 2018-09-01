@@ -70,7 +70,7 @@ if [[ ! -o vi ]]; then
   bind '"\er": redraw-current-line'
   bind '"\e^": history-expand-line'
 
-  # CTRL-T - Paste the selected file path into the command line
+  # CTRL-F - Paste the selected file path into the command line
   if [ $BASH_VERSINFO -gt 3 ]; then
     bind -x '"\C-f": "fzf-file-widget"'
   elif __fzf_use_tmux__; then
@@ -98,7 +98,7 @@ else
   bind '"\C-x\C-r": redraw-current-line'
   bind '"\C-x^": history-expand-line'
 
-  # CTRL-T - Paste the selected file path into the command line
+  # CTRL-F - Paste the selected file path into the command line
   # - FIXME: Selected items are attached to the end regardless of cursor position
   if [ $BASH_VERSINFO -gt 3 ]; then
     bind -x '"\C-f": "fzf-file-widget"'
