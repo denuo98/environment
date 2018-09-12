@@ -1,0 +1,13 @@
+# laravel55
+server {
+    listen 80;
+
+    root /var/www/laravel-dev/laravel55/public;
+
+    index index.php server.php;
+    server_name dev.laravel55.cc;
+
+    include rewrite-available/laravel.conf;
+    include fastcgi-available/php7.1-fpm;
+}
+
